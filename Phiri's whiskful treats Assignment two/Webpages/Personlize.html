@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"> <!-- Sets character encoding -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive design -->
+  <title>Personalize Your Treats - Phiri's Whiskful Treats</title> <!-- Title in browser tab -->
+  <link rel="stylesheet" href="style.css"> <!-- External stylesheet -->
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <div class="logo-container">
+      <img src="../Images/POE pics/Phiri's Whiskful Delights Logo.png" alt="Phiri's Whiskful Treats Logo" class="logo">
+      <h1>Phiri's Whiskful Treats 🍰</h1>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav>
+      <ul>
+        <li><a href="products.html">🍪 Products</a></li>
+        <li><a href="enquiry.html">📩 Enquiry</a></li>
+        <li><a href="AboutUs.html">💖 AboutUs</a></li>
+        <li><a href="Contact.html">☎ Contact</a></li>
+        <li><a href="HomePage.html">Home</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Personalization Section -->
+  <section class="personalization">
+    <h2>Personalize Your Treats 🧁</h2>
+    <p>Choose your favorite treats, flavors, sizes, and add your custom message to make it truly yours!</p>
+
+    <!-- Progress Indicator -->
+    <div class="progress">
+      Step 1: Select Treat → Step 2: Choose Flavor → Step 3: Customize Message → Step 4: Confirm Order
+    </div>
+
+    <!-- Personalization Form -->
+    <form action="submit-personalization.html" method="POST" enctype="multipart/form-data">
+      
+      <!-- Treat Selection -->
+      <label for="treat-type">Select Treat Type:</label>
+      <select name="treat-type" id="treat-type" required>
+        <option value="">--Choose a Treat--</option>
+        <option value="cake">Cake 🎂</option>
+        <option value="cookies">Cookies 🍪</option>
+        <option value="dessert">Dessert 🍮</option>
+      </select>
+
+      <!-- Flavor Selection -->
+      <label for="flavor">Choose Flavor:</label>
+      <select name="flavor" id="flavor" required>
+        <option value="">--Choose a Flavor--</option>
+        <option value="vanilla">Vanilla</option>
+        <option value="chocolate">Chocolate</option>
+        <option value="strawberry">Strawberry</option>
+        <option value="red-velvet">Red Velvet</option>
+        <option value="lemon">Lemon</option>
+      </select>
+
+      <!-- Size Selection -->
+      <label for="size">Select Size:</label>
+      <select name="size" id="size" required>
+        <option value="">--Choose Size--</option>
+        <option value="small">Small (1-4 servings)</option>
+        <option value="medium">Medium (5-8 servings)</option>
+        <option value="large">Large (9-12 servings)</option>
+      </select>
+
+      <!-- Quantity Input -->
+      <label for="quantity">Quantity:</label>
+      <input type="number" id="quantity" name="quantity" min="1" max="50" value="1" required>
+
+      <!-- Event/Delivery Date -->
+      <label for="delivery-date">Event/Delivery Date:</label>
+      <input type="date" id="delivery-date" name="delivery-date" required>
+
+      <!-- Custom Message -->
+      <label for="message">Add a Custom Message:</label>
+      <textarea name="message" id="message" rows="4" placeholder="Write your message here..."></textarea>
+
+      <!-- Special Requests -->
+      <label for="special">Special Requests (optional):</label>
+      <textarea id="special" name="special" rows="3" placeholder="e.g. Gluten-free, nut-free, extra sprinkles"></textarea>
+
+      <!-- Upload Reference Image -->
+      <label for="design">Upload a Reference Image (optional):</label>
+      <input type="file" id="design" name="design" accept="image/*">
+
+      <!-- Submit Button -->
+      <button type="submit" class="button">Submit Personalization</button>
+    </form>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2024 Phiri's Whiskful Treats. All rights reserved. 💕</p>
+  </footer>
+
+</body>
+</html>
