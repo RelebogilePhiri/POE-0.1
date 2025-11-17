@@ -135,84 +135,10 @@
 
   </main>
 
-  <!-- Best selling cakes preview (inserted by script) -->
-  <main class="cakes-page">
-
-    <h2>Our Best Selling Cakes 🍰</h2>
-    <p>These are our customers’ absolute favourites!</p>
-
-    <!-- CAKE GRID -->
-    <div id="cakeGrid" class="cake-grid"></div>
-
-    <!-- LOAD MORE BUTTON -->
-    <button id="loadMoreBtn" class="load-more-btn">Load More Cakes</button>
-
-  </main>
-
-  <script>
-    // -------------------------------
-    // 1. BEST SELLING CAKES DATA
-    // -------------------------------
-    const bestSellingCakes = [
-      {
-        name: "Chocolate Delight",
-        description: "Rich and creamy chocolate goodness.",
-        image: "images/bestseller1.jpg"
-      },
-      {
-        name: "Red Velvet Dream",
-        description: "Smooth cream cheese frosting on velvet sponge.",
-        image: "images/bestseller2.jpg"
-      },
-      {
-        name: "Caramel Crunch",
-        description: "Sweet caramel layered with crunchy goodness.",
-        image: "images/bestseller3.jpg"
-      }
-    ];
-
-    // -------------------------------
-    // 2. LOAD CAKES INTO PAGE
-    // -------------------------------
-    const cakeGrid = document.getElementById("cakeGrid");
-
-    function displayBestSellers() {
-      if (!cakeGrid) return;
-      bestSellingCakes.forEach(cake => {
-        const card = document.createElement("div");
-        card.classList.add("cake-card");
-
-        card.innerHTML = `
-          <img src="${cake.image}" alt="${cake.name}">
-          <h3>${cake.name}</h3>
-          <p>${cake.description}</p>
-        `;
-
-        cakeGrid.appendChild(card);
-      });
-    }
-
-    displayBestSellers();
-
-    // -------------------------------
-    // 3. LOAD MORE BUTTON
-    // -------------------------------
-    const loadMoreBtnEl = document.getElementById("loadMoreBtn");
-    if (loadMoreBtnEl) {
-      loadMoreBtnEl.addEventListener("click", () => {
-        window.location.href = "all-cakes.html";
-      });
-    }
-  </script>
-
   <!-- Footer -->
   <footer>
     <p>&copy; 2024 Phiri's Whiskful Treats 🍰. All rights reserved.</p>
   </footer>
-
-   <div class="social-links">
-      <a href="https://github.com/RelebogilePhiri" target="_blank" rel="noopener noreferrer">👩‍💻 GitHub</a>
-    </div>
 
 </body>
 </html>
